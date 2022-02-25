@@ -58,16 +58,16 @@ it('should not disable button', () => {
 })
 it('should render children', () => {
     render(<Button loading={false}>Text</Button>);
-    const children = screen.queryByLabelText('children')
+    const children = screen.queryByTestId('children')
     expect(children).toBeInTheDocument();
 })
 it('should display loading animation', () => {
     render(<Button isLoading={true}>Text</Button>);
-    const loading = screen.queryByLabelText('loading')
+    const loading = screen.queryByTestId('loading')
     expect(loading).toBeInTheDocument();
 })
 it('should not display loading animation', () => {
     render(<Button isLoading={false}>Text</Button>);
-    const loading = screen.queryByLabelText('loading')
+    const loading = screen.queryByTestId('loading')
     expect(loading).not.toBeInTheDocument();
 })

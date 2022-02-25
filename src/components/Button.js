@@ -7,11 +7,11 @@ import "../styles/Button.css"
 
 function Button(props) {
 
-    let color = props?.color ? props.color : "primary"
+    let color = props?.color ? props.color : "primary" // color default: "primary"
     let iconDisplay = props?.icon ? "display-icon" : ""
     
-    let loading = (props?.isLoading === true) ? "display-loading" : ""
-    let disabled = (props?.isLoading === true) ? false : (props?.disabled ?? false)
+    let loading = props?.isLoading
+    let disabled = (loading === true) ? false : (props?.disabled ?? false) // disabled default: false; if loading, disabled has no effects
 
     let textColor = (color === "primary") ? "dots-primary" : "dots-secondary"
 
@@ -31,7 +31,7 @@ function Button(props) {
 
     function dotsRender(){
         return(
-            <div aria-label='loading' className={`dots-container ${textColor}`}>
+            <div data-testid='loading' className={`dots-container ${textColor}`}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -42,7 +42,7 @@ function Button(props) {
     function buttonContent(){
         return(
             <>
-                <div aria-label='children'>{(props?.children ?? "")}</div>
+                <div data-testid='children'>{(props?.children ?? "")}</div>
                 {setIcon() ?? ""}
             </>
         )
@@ -50,7 +50,7 @@ function Button(props) {
 
     return (
         <button
-            className={`${color} ${iconDisplay} ${loading}`}
+            className={`${color} ${iconDisplay}`}
             disabled={disabled} // a little verbose, but explicit as for the requirements
             onClick={props?.onClick}
             value={props?.value}
