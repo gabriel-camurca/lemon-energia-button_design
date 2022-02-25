@@ -13,8 +13,10 @@ function Home() {
           mas ao colocá-lo dentro de um container com
           largura maior, ele deve preencher 100% do
           espaço disponível.</p>
+
         <br/>
         <br/>
+
         <h2 className="page-topic">Props</h2>
         <p className="sub-topic">color</p>
 
@@ -22,18 +24,18 @@ function Home() {
         <div className="button-group">
           <DisplayButton buttonText="Text" description="Normal"/>
           <DisplayButton buttonText="Text" description="Hover"/>
-          <DisplayButton buttonText="Text" description="Disabled" disabled={true}/>
-          <DisplayButton buttonText="Text" description="Pressed"/>
-          <DisplayButton buttonText="Text" description="Loading"/>
+          <DisplayButton buttonText="Text" description="Disabled" disabled/>
+          <DisplayButton buttonText="Text" description="Pressed (Hold the click)"/>
+          <DisplayButton buttonText="Text" description="Loading" isLoading={true}/>
         </div>
 
         <p>secondary</p>
         <div className="button-group">
-          <DisplayButton buttonText="Text" description="Normal"/>
-          <DisplayButton buttonText="Text" description="Hover"/>
-          <DisplayButton buttonText="Text" description="Disabled" disabled={true}/>
-          <DisplayButton buttonText="Text" description="Pressed"/>
-          <DisplayButton buttonText="Text" description="Loading"/>
+          <DisplayButton color="secondary" buttonText="Text" description="Normal"/>
+          <DisplayButton color="secondary" buttonText="Text" description="Hover"/>
+          <DisplayButton color="secondary" buttonText="Text" description="Disabled" disabled/>
+          <DisplayButton color="secondary" buttonText="Text" description="Pressed (Hold the click)"/>
+          <DisplayButton color="secondary" buttonText="Text" description="Loading" isLoading={true}/>
         </div>
 
         <br/>
@@ -42,9 +44,9 @@ function Home() {
         <p className="sub-topic">icon</p>
         <div className="button-group">
           <DisplayButton buttonText="Text" description="No Icon"/>
-          <DisplayButton buttonText="Text" description="arrow-right"/>
-          <DisplayButton buttonText="Text" description="check"/>
-          <DisplayButton buttonText="Text" description="refresh"/>
+          <DisplayButton buttonText="Text" icon="arrow-right" description="arrow-right"/>
+          <DisplayButton buttonText="Text" icon="check" description="check"/>
+          <DisplayButton buttonText="Text" icon="refresh" description="refresh"/>
         </div>
 
         <br/>
@@ -62,7 +64,7 @@ function Home() {
         <h2 className="page-topic">loading</h2>
         <div className="button-group">
           <DisplayButton buttonText="Text" description="false"/>
-          <DisplayButton buttonText="Text" description="true"/>
+          <DisplayButton buttonText="Text" description="true" isLoading={true}/>
         </div>
 
         <br/>
