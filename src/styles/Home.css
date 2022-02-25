@@ -1,0 +1,65 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2vw;
+    background-color: #EBEADF;
+}
+
+
+.page-title{
+    font-weight: 400;
+}
+
+.title-description{
+    max-width: 40%;
+}
+
+.page-topic{
+    font-weight: 400;
+}
+
+.sub-topic{
+    text-decoration: underline;
+}
+
+.button-group{
+    display:flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+/* .button-group button{
+    margin-right: 2vw;
+    min-width: 311px;
+
+    Test version of width
+    width: 10%;
+
+    Component Width Must Be 100%
+    width: 100%;
+
+    Optional: height
+    height: 56px;
+} */
+
+/* 
+O componente Button é utilizado para as ações de clique do usuário. Um elemento Button tem um comprimento mínimo (o apresentado nas figuras abaixo), mas ao colocá-lo dentro de um container com largura maior, ele deve preencher 100% do espaço disponível.
+
+position: absolute;
+width: 826px;
+height: 73px;
+left: 40px;
+top: 138px; */
+
+/* Typescale/Body 100 */
+
+/* font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px; */
+
+/* or 150% */
+
+/* letter-spacing: -0.032em;
+
+color: #000000; */

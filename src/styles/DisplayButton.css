@@ -1,0 +1,22 @@
+.button-container{
+    width: 20vw;
+    margin-right: 2vw;
+}
+
+.button{
+    
+    /* Test version of width */
+    width: 100%;
+    
+    /* Component Width Must Be 100% or at least 311px*/
+    /* min-width: 311px; */
+    /* width: 100%; */
+
+    /* Optional: height */
+    height: 56px;
+}
+
+.button-description{
+    color: #939391;
+
+}
