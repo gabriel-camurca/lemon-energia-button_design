@@ -1,3 +1,6 @@
+/* Button container has width greater than
+the button minimum width, so it adapts to 100% of the container */
+
 .button-container{
     width: 20vw;
     margin-right: 2vw;

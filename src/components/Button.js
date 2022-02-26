@@ -7,14 +7,18 @@ import "../styles/Button.css"
 
 function Button(props) {
 
-    let color = props?.color ? props.color : "primary" // color default: "primary"
+    // color set as "primary" by default
+    let color = props?.color ? props.color : "primary"
+
+    // button without icon by default
     let iconDisplay = props?.icon ? "display-icon" : ""
     
     let loading = props?.isLoading
-    let disabled = (loading === true) ? false : (props?.disabled ?? false) // disabled default: false; if loading, disabled has no effects
 
-    let textColor = (color === "primary") ? "dots-primary" : "dots-secondary"
+    // disabled set as false by default; if loading, disabled has no effects by requirements
+    let disabled = (loading === true) ? false : (props?.disabled ?? false)
 
+    // Decides which icon is to be loaded, if any
     function setIcon(){
         let icon = props?.icon;
         switch (icon) {
@@ -29,9 +33,10 @@ function Button(props) {
         }
     }
 
+    // Render content for the loading animation
     function dotsRender(){
         return(
-            <div data-testid='loading' className={`dots-container ${textColor}`}>
+            <div data-testid='loading' className={`dots-container ${color}-dots`}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -39,6 +44,7 @@ function Button(props) {
         )
     }
 
+    // Render actual button content
     function buttonContent(){
         return(
             <>
@@ -51,11 +57,12 @@ function Button(props) {
     return (
         <button
             className={`${color} ${iconDisplay}`}
-            disabled={disabled} // a little verbose, but explicit as for the requirements
+            disabled={disabled}
             onClick={props?.onClick}
             value={props?.value}
         >
             {
+                // Either renders animation content or button content
                 !loading ? buttonContent() : dotsRender()
             }
         </button>
@@ -64,13 +71,13 @@ function Button(props) {
 
 Button.propTypes = {
     color: PropTypes.string, // primary or secondary
-    icon: PropTypes.string,
-    onClick: PropTypes.func,
+    icon: PropTypes.string, // arrow-right, check, refresh
+    onClick: PropTypes.func, // general function
     children: PropTypes.node, // button text
-    disabled: PropTypes.bool,
-    loading: PropTypes.bool,
+    disabled: PropTypes.bool, // default false
+    loading: PropTypes.bool, // default false
 
-    value: PropTypes.any
+    value: PropTypes.any // user may want to attribute value to button
 }
 
 export default Button
