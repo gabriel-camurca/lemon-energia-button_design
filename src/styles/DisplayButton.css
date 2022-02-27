@@ -1,6 +1,13 @@
 /* Button container has width greater than
 the button minimum width, so it adapts to 100% of the container */
 
+/* This component should have width equal to 100% and whoever
+calls it set the specified width to whatever is necessary. However,
+the expected behavior of adjusting the button width to it's parent
+component (this component) becomes clearer this way; and, because
+the site serves more as a proof of concept, it becomes easier for
+the reader/other developers to change the widths for confirmation */
+
 .button-container{
     width: 20vw;
     margin-right: 2vw;

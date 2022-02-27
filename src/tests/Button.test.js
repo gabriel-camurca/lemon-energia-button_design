@@ -47,9 +47,13 @@ it('should execute function passed on click', () => {
     expect(clicked).toHaveBeenCalled()
 })
 it('should disable button', () => {
-    render(<Button disabled={true}></Button>);
+    const clicked = jest.fn();
+    render(<Button onClick={clicked} disabled></Button>);
     const button = screen.queryByRole('button');
-    expect(button).toHaveAttribute('disabled')
+    expect(button).toHaveAttribute('disabled');
+    userEvent.click(button)
+    expect(clicked).not.toHaveBeenCalled()
+
 })
 it('should not disable button', () => {
     render(<Button disabled={false}></Button>);

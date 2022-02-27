@@ -41,7 +41,7 @@ function Home() {
 
         <p className="sub-topic">disabled</p>
         <div className="button-group">
-        <DisplayButton buttonText="Text" description="false"/>
+          <DisplayButton buttonText="Text" description="false"/>
           <DisplayButton buttonText="Text" description="true" disabled={true}/>
         </div>
 

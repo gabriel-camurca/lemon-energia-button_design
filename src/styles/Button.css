@@ -24,7 +24,7 @@ button:hover{
     cursor: pointer;
 }
 
-button:disabled{
+button[disabled]{
     pointer-events: none;
     opacity: 0.5;
     color: #fff;
@@ -80,7 +80,6 @@ button:disabled{
 }
 
 .dots-container div{
-    background-color: var(--color-text);
     width: 0.25rem;
     height: 0.25rem;
     margin: 0 0.15rem;
