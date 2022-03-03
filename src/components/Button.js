@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import arrowRight from "../arrow-right.svg"
-import check from "../check.svg"
-import refresh from "../refresh.svg"
+import arrowRight from "../assets/arrow-right.svg"
+import check from "../assets/check.svg"
+import refresh from "../assets/refresh.svg"
 import "../styles/Button.css"
 
 function Button(props) {
