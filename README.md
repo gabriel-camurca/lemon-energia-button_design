@@ -1,6 +1,6 @@
 # :heavy_check_mark: UI Library - Button Component
 
-Hello! Welcome to my solution for the Frontend Test at Lemon Energia! :sparkles:
+Hello, Welcome! :sparkles:
 
 If you'd like to see everything already running, here's the [link](https://lemon-energia-button-design.vercel.app/).
 
